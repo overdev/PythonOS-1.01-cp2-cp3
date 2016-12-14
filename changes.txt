@@ -1,0 +1,8 @@
+Changes from furmada's project
+------------------------------
+
+- Replacing the use of JSON files:
+    Due to the way json module deals with files (encoding/deconding), a replacement is proposed. A python file (still with json extension) is being used to circunvent the need to encode/decode the file everytime it is loaded or saved. This facilitates the porting from py2 to py3 because it eliminates the need of changing the encoding. It has the downside of not accepting files encoded in utf-8 with BOM. Python 3's ast eval function doesn't like BOMs, but Python 2 seems not to care.
+
+- New SubData object:
+    Created to replace dictionaries constructed from json files. This object behaves as ordered dictionaires and common objects as well, e.g., their values can be accessed as member attributes.
