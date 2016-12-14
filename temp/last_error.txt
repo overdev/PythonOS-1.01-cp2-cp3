@@ -1,0 +1,21 @@
+Python OS 6 Error Report
+TIME: 2016-12-13 14:35:22.622000
+
+Open Applications: ['calculator', 'home']
+Message: Event execution error
+Additional Data:
+Click event: <Event(6-MouseButtonUp {'button': 1, 'pos': (225, 383)})>
+
+Traceback:
+Traceback (most recent call last):
+  File "C:/Jorge/GitHub/PythonOS-1.01/pyos.py", line 2771, in main
+    clickedChild.onClick()
+  File "C:\Jorge\GitHub\PythonOS-1.01\pyos.py", line 585, in onClick
+    self.eventBindings["onClick"]()
+  File "C:\Jorge\GitHub\PythonOS-1.01\apps\calculator\__init__.py", line 83, in evaluate
+    self.compField.refresh()
+  File "C:\Jorge\GitHub\PythonOS-1.01\pyos.py", line 817, in refresh
+    self.surface = self.getRenderedText()
+  File "C:\Jorge\GitHub\PythonOS-1.01\pyos.py", line 814, in getRenderedText
+    return self.font.get(self.size).render(self.text, 1, self.color)
+TypeError: text must be a string or unicode
